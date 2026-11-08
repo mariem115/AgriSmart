@@ -1,0 +1,12 @@
+Modèle de diagnostic utilisé par PlantScanActivity :
+  - plant_model.tflite : MobileNet entraîné sur PlantVillage (38 classes),
+    entrée float32 [1, 224, 224, 3] en pixels bruts 0..255 (normalisation incluse dans le modèle),
+    sortie [1, 38] = probabilités.
+  - labels.txt : les 38 étiquettes, dans l'ordre des sorties du modèle.
+
+Source : projet Cropora de Mahir Faysal Tusher (licence MIT)
+https://github.com/M-F-Tushar/Cropora (android-app-kotlin/app/src/main/assets/)
+Copyright (c) 2026 Mahir Faysal Tusher - MIT License.
+
+Pour utiliser votre propre modèle (entraîné sur Colab), remplacez ces deux fichiers
+et adaptez PIXEL_MEAN / PIXEL_STD en haut de PlantScanActivity.java.

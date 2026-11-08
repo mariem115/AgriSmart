@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tableau de bord (maquette 03) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- En-tête : bonjour + ferme + boutons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnNotifications"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_circle"
+                    android:contentDescription="@string/notifications"
+                    android:src="@drawable/ic_notifications"
+                    app:tint="@color/text_primary" />
+
+                <TextView
+                    android:id="@+id/tvAvatar"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_circle"
+                    android:backgroundTint="@color/green_soft"
+                    android:contentDescription="@string/profile_title"
+                    android:gravity="center"
+                    android:textColor="@color/green_primary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Carte météo (remplie en phase 8) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_weather"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvWeatherPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weather_today_default"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tvWeatherTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weather_placeholder_temp"
+                            android:textColor="@color/white"
+                            android:textSize="36sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvWeatherDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weather_placeholder_desc"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivWeather"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_sun"
+                        app:tint="#FFE082" />
+                </LinearLayout>
+
+                <!-- Humidité / vent / pluie -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_pill"
+                        android:backgroundTint="@color/white_translucent"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_water"
+                        app:drawableTint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvWind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_pill"
+                        android:backgroundTint="@color/white_translucent"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_air"
+                        app:drawableTint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvRain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_pill"
+                        android:backgroundTint="@color/white_translucent"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_umbrella"
+                        app:drawableTint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Bénéfice du mois (agriculteur) + Tâches du jour -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardProfit"
+                    style="@style/Widget.AgriSmart.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/profit_month"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_trending_up"
+                            app:drawableTint="@color/green_primary" />
+
+                        <TextView
+                            android:id="@+id/tvProfit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/profit_placeholder"
+                            android:textColor="@color/green_primary"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvProfitDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTasks"
+                    style="@style/Widget.AgriSmart.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/tasks_today_card"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/ic_task"
+                            app:drawableTint="@color/orange" />
+
+                        <TextView
+                            android:id="@+id/tvTasksCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/placeholder_dash"
+                            android:textColor="@color/text_primary"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTasksDone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Raccourcis (agriculteur uniquement) -->
+            <LinearLayout
+                android:id="@+id/layoutQuickActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/actionIrrigation"
+                    style="@style/AgriSmart.QuickAction">
+
+                    <ImageView
+                        style="@style/AgriSmart.QuickActionIcon"
+                        android:backgroundTint="@color/blue_soft"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_water"
+                        app:tint="@color/blue" />
+
+                    <TextView
+                        style="@style/AgriSmart.QuickActionLabel"
+                        android:text="@string/action_irrigation" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionWorkers"
+                    style="@style/AgriSmart.QuickAction">
+
+                    <ImageView
+                        style="@style/AgriSmart.QuickActionIcon"
+                        android:backgroundTint="@color/green_soft"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_groups"
+                        app:tint="@color/green_primary" />
+
+                    <TextView
+                        style="@style/AgriSmart.QuickActionLabel"
+                        android:text="@string/action_workers" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionStock"
+                    style="@style/AgriSmart.QuickAction">
+
+                    <ImageView
+                        style="@style/AgriSmart.QuickActionIcon"
+                        android:backgroundTint="@color/orange_soft"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_inventory"
+                        app:tint="@color/orange" />
+
+                    <TextView
+                        style="@style/AgriSmart.QuickActionLabel"
+                        android:text="@string/action_stock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionFinance"
+                    style="@style/AgriSmart.QuickAction">
+
+                    <ImageView
+                        style="@style/AgriSmart.QuickActionIcon"
+                        android:backgroundTint="@color/green_soft"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_payments"
+                        app:tint="@color/green_primary" />
+
+                    <TextView
+                        style="@style/AgriSmart.QuickActionLabel"
+                        android:text="@string/action_finance" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionHarvest"
+                    style="@style/AgriSmart.QuickAction">
+
+                    <ImageView
+                        style="@style/AgriSmart.QuickActionIcon"
+                        android:backgroundTint="@color/red_soft"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_agriculture"
+                        app:tint="@color/red" />
+
+                    <TextView
+                        style="@style/AgriSmart.QuickActionLabel"
+                        android:text="@string/action_harvest" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Alertes (remplies en phase 8) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/AgriSmart.SectionTitle"
+                    android:text="@string/alerts_title" />
+            </LinearLayout>
+
+            <!-- Lignes item_alert.xml ajoutées en Java -->
+            <LinearLayout
+                android:id="@+id/layoutAlerts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/tvAlertsEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:text="@string/alerts_empty"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_check"
+                app:drawableTint="@color/green_primary" />
+
+            <!-- Tâches du jour (remplies en phase 8) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/AgriSmart.SectionTitle"
+                    android:text="@string/tasks_today_title" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllTasks"
+                    style="@style/AgriSmart.Link"
+                    android:text="@string/see_all" />
+            </LinearLayout>
+
+            <!-- Lignes item_dashboard_task.xml ajoutées en Java -->
+            <LinearLayout
+                android:id="@+id/layoutTodayTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/tvTasksEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:text="@string/tasks_today_empty"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_task"
+                app:drawableTint="@color/text_secondary" />
+
+            <!-- Code de la ferme (agriculteur) : à donner aux ouvriers -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFarmCode"
+                style="@style/Widget.AgriSmart.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_circle"
+                        android:backgroundTint="@color/green_soft"
+                        android:importantForAccessibility="no"
+                        android:padding="9dp"
+                        android:src="@drawable/ic_key"
+                        app:tint="@color/green_primary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/farm_code_title"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvFarmCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.15"
+                            android:text="@string/placeholder_dash"
+                            android:textColor="@color/text_primary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/farm_code_hint"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_copy"
+                        app:tint="@color/text_secondary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Barre de navigation du bas -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/bottom_nav_item"
+        app:itemTextColor="@color/bottom_nav_item"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+</LinearLayout>

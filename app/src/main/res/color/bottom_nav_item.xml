@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Couleur des onglets de la barre du bas -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/green_primary" android:state_checked="true" />
+    <item android:color="@color/text_secondary" />
+</selector>

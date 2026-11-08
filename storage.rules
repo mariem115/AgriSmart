@@ -1,0 +1,20 @@
+rules_version = '2';
+
+// Règles Firebase Storage - AgriSmart
+// Les photos sont rangées par ferme : farms/{farmId}/diagnostics/{photo}.jpg
+// Seuls les membres de la ferme (même farmId dans leur profil Firestore) y ont accès.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /farms/{farmId}/{allPaths=**} {
+      function isMember() {
+        return request.auth != null
+          && firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.farmId == farmId;
+      }
+      allow read: if isMember();
+      // Images de moins de 5 Mo uniquement
+      allow write: if isMember()
+        && request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+  }
+}

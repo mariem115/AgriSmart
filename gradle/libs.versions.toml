@@ -1,0 +1,34 @@
+[versions]
+# AGP 9.4 = version utilisée par votre Android Studio (Gradle 9.6)
+agp = "9.4.0"
+googleServices = "4.5.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+recyclerview = "1.3.2"
+firebaseBom = "35.1.0"
+playServicesLocation = "21.3.0"
+okhttp = "4.12.0"
+mpandroidchart = "v3.1.0"
+tensorflowLite = "2.16.1"
+
+[libraries]
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+# Firebase : la BoM fixe les versions de toutes les briques Firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
+# Position GPS (FusedLocationProvider)
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage" }
+# Appels HTTP (météo OpenWeather)
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+# Graphiques (dépôt JitPack déclaré dans settings.gradle.kts)
+mpandroidchart = { group = "com.github.PhilJay", name = "MPAndroidChart", version.ref = "mpandroidchart" }
+# Modèle de diagnostic sur le téléphone
+tensorflow-lite = { group = "org.tensorflow", name = "tensorflow-lite", version.ref = "tensorflowLite" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }

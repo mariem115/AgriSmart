@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Bouton "Utiliser ma position actuelle" (parcelles) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Notifications locales (nouvelle tâche, stock bas) - Android 13+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Saisie vocale de l'assistant -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Android 11+ : pour vérifier que la reconnaissance vocale et l'appareil photo existent -->
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AgriSmart"
+        tools:targetApi="33">
+
+        <!-- 1. Démarrage -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AgriSmart.Green">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 1. Connexion -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AgriSmart.Green" />
+
+        <!-- 2. Inscription -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- 3. Tableau de bord -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <!-- 4. Liste des parcelles -->
+        <activity
+            android:name=".ParcelListActivity"
+            android:exported="false" />
+
+        <!-- 5. Détail / ajout / modification d'une parcelle -->
+        <activity
+            android:name=".ParcelDetailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 6. Diagnostic IA -->
+        <activity
+            android:name=".PlantScanActivity"
+            android:exported="false" />
+
+        <!-- 7. Irrigation -->
+        <activity
+            android:name=".IrrigationActivity"
+            android:exported="false" />
+
+        <!-- 8. Ouvriers -->
+        <activity
+            android:name=".WorkersActivity"
+            android:exported="false" />
+
+        <!-- 9. Tâches -->
+        <activity
+            android:name=".TasksActivity"
+            android:exported="false" />
+
+        <!-- 10. Stock -->
+        <activity
+            android:name=".StockActivity"
+            android:exported="false" />
+
+        <!-- 11. Finances -->
+        <activity
+            android:name=".FinanceActivity"
+            android:exported="false" />
+
+        <!-- 12. Récoltes -->
+        <activity
+            android:name=".HarvestActivity"
+            android:exported="false" />
+
+        <!-- 13. Assistant -->
+        <activity
+            android:name=".AssistantActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Mémorise la langue choisie (FR / AR) sur Android < 13 -->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,121 @@
+rules_version = '2';
+
+// Règles de sécurité Firestore - AgriSmart
+// Principe : chaque document porte un farmId ; un utilisateur ne voit que sa ferme.
+// L'ouvrier ne voit pas les finances, le stock, les récoltes, l'irrigation ni les salaires,
+// et ne peut modifier que le statut (et la note de problème) de SES tâches.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------- Fonctions utiles ----------
+    function signedIn() {
+      return request.auth != null;
+    }
+    function myProfile() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+    function isFarmer() {
+      return signedIn() && myProfile().role == 'farmer';
+    }
+    // Le document existant appartient à ma ferme
+    function inMyFarm() {
+      return signedIn() && resource.data.farmId == myProfile().farmId;
+    }
+    // Le document envoyé appartient à ma ferme
+    function newInMyFarm() {
+      return signedIn() && request.resource.data.farmId == myProfile().farmId;
+    }
+
+    // ---------- users ----------
+    match /users/{uid} {
+      // Je lis mon profil et ceux des membres de ma ferme
+      allow read: if signedIn() && (request.auth.uid == uid || resource.data.farmId == myProfile().farmId);
+      // Création de MON profil :
+      //  - agriculteur : la ferme (créée dans le même batch) doit m'appartenir
+      //  - ouvrier : la ferme doit exister (code donné par l'agriculteur)
+      allow create: if signedIn() && request.auth.uid == uid && (
+        (request.resource.data.role == 'farmer'
+          && getAfter(/databases/$(database)/documents/farms/$(request.resource.data.farmId)).data.ownerUid == request.auth.uid)
+        || (request.resource.data.role == 'worker'
+          && exists(/databases/$(database)/documents/farms/$(request.resource.data.farmId)))
+      );
+      // Mise à jour de mon profil (nom, langue) sans changer de rôle ni de ferme
+      allow update: if signedIn() && request.auth.uid == uid
+        && request.resource.data.role == resource.data.role
+        && request.resource.data.farmId == resource.data.farmId;
+      allow delete: if false;
+    }
+
+    // ---------- farms ----------
+    match /farms/{farmId} {
+      // Lecture ouverte aux connectés : l'ouvrier doit vérifier le code à l'inscription
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow update: if signedIn() && resource.data.ownerUid == request.auth.uid;
+      allow delete: if false;
+    }
+
+    // ---------- parcels : tout le monde lit, l'agriculteur écrit ----------
+    match /parcels/{id} {
+      allow read: if inMyFarm();
+      allow create: if newInMyFarm() && isFarmer();
+      allow update, delete: if inMyFarm() && isFarmer();
+    }
+
+    // ---------- diagnostics : tout le monde peut scanner une plante ----------
+    match /diagnostics/{id} {
+      allow read: if inMyFarm();
+      allow create: if newInMyFarm();
+      allow update, delete: if inMyFarm() && isFarmer();
+    }
+
+    // ---------- workers : agriculteur seulement (salaires) ----------
+    match /workers/{workerId} {
+      allow read, update, delete: if inMyFarm() && isFarmer();
+      allow create: if
+        // un ouvrier crée SA fiche à l'inscription, avec un salaire à 0
+        (signedIn() && request.auth.uid == workerId
+            && request.resource.data.dailySalary == 0
+            && getAfter(/databases/$(database)/documents/users/$(request.auth.uid)).data.farmId == request.resource.data.farmId)
+        // l'agriculteur ajoute un ouvrier
+        || (newInMyFarm() && isFarmer());
+    }
+
+    // ---------- tasks ----------
+    match /tasks/{id} {
+      // L'agriculteur voit tout, l'ouvrier seulement les tâches qui lui sont assignées
+      allow read: if inMyFarm() && (isFarmer() || resource.data.assignedTo == request.auth.uid);
+      allow create: if newInMyFarm() && isFarmer();
+      allow delete: if inMyFarm() && isFarmer();
+      allow update: if inMyFarm() && (
+        isFarmer()
+        || (resource.data.assignedTo == request.auth.uid
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'problemNote']))
+      );
+    }
+
+    // ---------- Données réservées à l'agriculteur ----------
+    match /irrigations/{id} {
+      allow read, update, delete: if inMyFarm() && isFarmer();
+      allow create: if newInMyFarm() && isFarmer();
+    }
+    match /stock/{id} {
+      allow read, update, delete: if inMyFarm() && isFarmer();
+      allow create: if newInMyFarm() && isFarmer();
+    }
+    match /transactions/{id} {
+      allow read, update, delete: if inMyFarm() && isFarmer();
+      allow create: if newInMyFarm() && isFarmer();
+    }
+    match /harvests/{id} {
+      allow read, update, delete: if inMyFarm() && isFarmer();
+      allow create: if newInMyFarm() && isFarmer();
+    }
+
+    // ---------- chatMessages : chacun ne voit que ses propres messages ----------
+    match /chatMessages/{id} {
+      allow read, delete: if signedIn() && resource.data.uid == request.auth.uid;
+      allow create: if signedIn() && request.resource.data.uid == request.auth.uid;
+    }
+  }
+}

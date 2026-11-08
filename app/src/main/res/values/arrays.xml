@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Codes enregistrés dans Firestore (ne pas traduire).
+     Les libellés traduits sont dans strings.xml, dans le MÊME ordre. -->
+<resources>
+    <string-array name="crop_codes" translatable="false">
+        <item>olive</item>
+        <item>citrus</item>
+        <item>date_palm</item>
+        <item>cereal</item>
+        <item>vegetable</item>
+        <item>other</item>
+    </string-array>
+
+    <string-array name="soil_codes" translatable="false">
+        <item>clay</item>
+        <item>loam</item>
+        <item>sandy</item>
+        <item>limestone</item>
+    </string-array>
+
+    <string-array name="health_codes" translatable="false">
+        <item>healthy</item>
+        <item>watch</item>
+        <item>sick</item>
+    </string-array>
+
+    <string-array name="stock_type_codes" translatable="false">
+        <item>fertilizer</item>
+        <item>pesticide</item>
+        <item>seed</item>
+    </string-array>
+
+    <string-array name="finance_category_codes" translatable="false">
+        <item>treatment</item>
+        <item>fertilizer</item>
+        <item>seeds</item>
+        <item>labor</item>
+        <item>water</item>
+        <item>fuel</item>
+        <item>equipment</item>
+        <item>sale</item>
+        <item>subsidy</item>
+        <item>other</item>
+    </string-array>
+</resources>

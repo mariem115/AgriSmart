@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== عام ===== -->
+    <string name="app_tagline">أدِر مستغلّتك الفلاحية بكل بساطة.</string>
+    <string name="back">رجوع</string>
+    <string name="yes">نعم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="coming_soon">قريبًا</string>
+    <string name="placeholder_dash">--</string>
+
+    <!-- ===== الأدوار ===== -->
+    <string name="role_farmer">فلاح</string>
+    <string name="role_worker">عامل</string>
+
+    <!-- ===== تسجيل الدخول ===== -->
+    <string name="login_i_am">أنا</string>
+    <string name="label_email">البريد الإلكتروني</string>
+    <string name="hint_email">nom@exemple.com</string>
+    <string name="label_password">كلمة المرور</string>
+    <string name="hint_password">كلمة المرور الخاصة بك</string>
+    <string name="forgot_password">نسيت كلمة المرور؟</string>
+    <string name="btn_login">تسجيل الدخول</string>
+    <string name="no_account">ليس لديك حساب؟</string>
+    <string name="create_account">إنشاء حساب</string>
+    <string name="reset_enter_email">أدخل بريدك الإلكتروني أولاً</string>
+    <string name="reset_email_sent">تم إرسال رسالة إعادة التعيين إلى %1$s</string>
+
+    <!-- ===== إنشاء حساب ===== -->
+    <string name="register_title">إنشاء حساب</string>
+    <string name="register_subtitle">بعض المعلومات لبدء استغلال مستغلّتك.</string>
+    <string name="label_full_name">الاسم الكامل</string>
+    <string name="hint_full_name">محمد بن صالح</string>
+    <string name="hint_password_new">8 أحرف على الأقل</string>
+    <string name="label_farm_name">اسم المستغلّة</string>
+    <string name="hint_farm_name">ضيعة بن صالح</string>
+    <string name="label_region">الولاية</string>
+    <string name="hint_region">صفاقس</string>
+    <string name="label_farm_code">رمز المستغلّة</string>
+    <string name="hint_farm_code">مثال: AB12CD</string>
+    <string name="farm_code_help">اطلب هذا الرمز من الفلاح: يظهر في لوحة القيادة الخاصة به.</string>
+    <string name="btn_register">إنشاء حسابي</string>
+    <string name="already_registered">لديك حساب؟</string>
+    <string name="go_login">تسجيل الدخول</string>
+
+    <!-- ===== الأخطاء ===== -->
+    <string name="error_required">حقل إجباري</string>
+    <string name="error_email">بريد إلكتروني غير صالح</string>
+    <string name="error_password_short">8 أحرف على الأقل</string>
+    <string name="error_farm_code_format">الرمز يتكوّن من 6 أحرف</string>
+    <string name="error_farm_code_unknown">الرمز غير موجود. تحقّق منه مع الفلاح.</string>
+    <string name="error_wrong_credentials">البريد الإلكتروني أو كلمة المرور غير صحيحة</string>
+    <string name="error_email_used">هذا البريد الإلكتروني مستعمل من قبل</string>
+    <string name="error_weak_password">كلمة المرور ضعيفة جدًا</string>
+    <string name="error_network">لا يوجد اتصال بالإنترنت. أعد المحاولة.</string>
+    <string name="error_unknown">حدث خطأ: %1$s</string>
+    <string name="error_profile_missing">لم يتم العثور على ملف هذا الحساب. أنشئ حسابًا جديدًا.</string>
+    <string name="error_role_farmer">هذا حساب فلاح: اختر «فلاح».</string>
+    <string name="error_role_worker">هذا حساب عامل: اختر «عامل».</string>
+
+    <!-- ===== لوحة القيادة ===== -->
+    <string name="dashboard_greeting">مرحبًا، %1$s</string>
+    <string name="dashboard_farm_line">%1$s · %2$s</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="no_notifications">لا توجد إشعارات جديدة</string>
+    <string name="weather_today">اليوم · %1$s</string>
+    <string name="weather_today_default">اليوم</string>
+    <string name="weather_placeholder_temp">--°C</string>
+    <string name="weather_placeholder_desc">الطقس متوفّر قريبًا</string>
+    <string name="weather_humidity">الرطوبة %1$s</string>
+    <string name="weather_wind">الرياح %1$s</string>
+    <string name="weather_rain">الأمطار %1$s</string>
+    <string name="profit_month">ربح الشهر</string>
+    <string name="profit_placeholder">-- د.ت</string>
+    <string name="tasks_today_card">مهام اليوم</string>
+    <string name="action_irrigation">الري</string>
+    <string name="action_workers">العمّال</string>
+    <string name="action_stock">المخزون</string>
+    <string name="action_finance">المالية</string>
+    <string name="action_harvest">المحاصيل</string>
+    <string name="alerts_title">التنبيهات</string>
+    <string name="alerts_empty">لا توجد تنبيهات حاليًا</string>
+    <string name="see_all">عرض الكل</string>
+    <string name="tasks_today_title">مهام اليوم</string>
+    <string name="tasks_today_empty">لا توجد مهام لليوم</string>
+    <string name="farm_code_title">رمز المستغلّة</string>
+    <string name="farm_code_hint">أعطِه لعمّالك ليلتحقوا بضيعتك. اضغط للنسخ.</string>
+    <string name="farm_code_copied">تم نسخ الرمز</string>
+
+    <!-- ===== شريط التنقل ===== -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_parcels">القطع</string>
+    <string name="nav_scan">فحص</string>
+    <string name="nav_tasks">المهام</string>
+    <string name="nav_assistant">المساعد</string>
+
+    <!-- ===== تسجيل الخروج ===== -->
+    <string name="logout">تسجيل الخروج</string>
+    <string name="logout_confirm">هل تريد تسجيل الخروج؟</string>
+
+    <!-- ===== القوائم (نفس ترتيب arrays.xml) ===== -->
+    <string-array name="crop_labels">
+        <item>زيتون</item>
+        <item>قوارص</item>
+        <item>نخيل التمر</item>
+        <item>حبوب</item>
+        <item>خضروات</item>
+        <item>أخرى</item>
+    </string-array>
+    <string-array name="soil_labels">
+        <item>طيني</item>
+        <item>طمي</item>
+        <item>رملي</item>
+        <item>كلسي</item>
+    </string-array>
+    <string-array name="health_labels">
+        <item>سليمة</item>
+        <item>تحت المراقبة</item>
+        <item>مرض مكتشف</item>
+    </string-array>
+
+    <!-- ===== القطع: القائمة ===== -->
+    <string name="parcels_title">قطعي</string>
+    <string name="parcels_search_hint">البحث عن قطعة</string>
+    <string name="parcels_filter_all">الكل</string>
+    <string name="parcels_empty">لا توجد قطع حاليًا</string>
+    <string name="parcels_add">إضافة قطعة</string>
+    <string name="parcel_subtitle">%1$s · %2$s هك · %3$s</string>
+
+    <!-- ===== القطع: التفاصيل / الاستمارة ===== -->
+    <string name="parcel_new_title">قطعة جديدة</string>
+    <string name="parcel_edit_title">تعديل القطعة</string>
+    <string name="parcel_label_name">اسم القطعة</string>
+    <string name="parcel_hint_name">القطعة 1 · زياتين الشمال</string>
+    <string name="parcel_label_crop">الزراعة</string>
+    <string name="parcel_label_area">المساحة (هك)</string>
+    <string name="parcel_hint_area">مثال: 3.5</string>
+    <string name="parcel_label_soil">نوع التربة</string>
+    <string name="parcel_label_health">الحالة الصحية</string>
+    <string name="parcel_label_gps">الموقع GPS</string>
+    <string name="parcel_label_latitude">خط العرض</string>
+    <string name="parcel_label_longitude">خط الطول</string>
+    <string name="parcel_use_my_location">استعمال موقعي الحالي</string>
+    <string name="parcel_open_maps">فتح في خرائط Google</string>
+    <string name="parcel_no_position">لا يوجد موقع</string>
+    <string name="parcel_area_value">%1$s هك</string>
+    <string name="parcel_gps_value">%1$s، %2$s</string>
+    <string name="parcel_history">السجل</string>
+    <string name="parcel_history_empty">لا يوجد سجل لهذه القطعة</string>
+    <string name="parcel_last_diagnostic">آخر تشخيص: %1$s</string>
+    <string name="parcel_no_diagnostic">لا يوجد تشخيص</string>
+    <string name="history_diagnostic">تشخيص: %1$s (%2$d %%)</string>
+    <string name="history_irrigation">ري: %1$s ل/م²</string>
+    <string name="history_harvest">جني: %1$s كغ</string>
+    <string name="btn_save">حفظ</string>
+    <string name="btn_edit">تعديل</string>
+    <string name="btn_delete">حذف</string>
+    <string name="parcel_saved">تم حفظ القطعة</string>
+    <string name="parcel_deleted">تم حذف القطعة</string>
+    <string name="parcel_delete_confirm">حذف «%1$s»؟ لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="parcel_not_found">القطعة غير موجودة</string>
+    <string name="error_number">رقم غير صالح</string>
+    <string name="error_area">يجب أن تكون المساحة أكبر من 0</string>
+    <string name="error_latitude">خط العرض بين -90 و 90</string>
+    <string name="error_longitude">خط الطول بين -180 و 180</string>
+    <string name="error_gps_both">أدخل خط العرض وخط الطول معًا (أو لا شيء)</string>
+    <string name="error_choose">اختر قيمة</string>
+    <string name="location_searching">جارٍ البحث عن الموقع…</string>
+    <string name="location_found">تم العثور على الموقع</string>
+    <string name="location_permission_denied">تم رفض إذن تحديد الموقع</string>
+    <string name="location_unavailable">الموقع غير متوفر. فعّل GPS وأعد المحاولة.</string>
+    <string name="maps_unavailable">لا يوجد تطبيق خرائط</string>
+
+    <!-- ===== المراحل 3 إلى 8 ===== -->
+    <string name="label_parcel">القطعة</string>
+    <string name="label_date">التاريخ</string>
+    <string name="label_phone">الهاتف</string>
+    <string name="hint_phone">+216 98 123 456</string>
+    <string name="label_daily_salary">الأجر اليومي (د.ت)</string>
+    <string name="hint_daily_salary">مثال: 45</string>
+    <string name="btn_send">إرسال</string>
+    <string name="loading">جارٍ التحميل…</string>
+    <string name="today">اليوم</string>
+    <string name="tomorrow">غدًا</string>
+    <string name="money_value">%1$s د.ت</string>
+    <string name="percent_value">%1$d %%</string>
+    <string name="quantity_unit">%1$s %2$s</string>
+    <string name="temperature_value">%1$d°C</string>
+    <string name="chart_no_data">لا توجد بيانات بعد</string>
+    <string name="need_parcel_first">أضف قطعة أولاً</string>
+    <string name="need_worker_first">أضف عاملاً أولاً</string>
+    <string name="error_amount">مبلغ غير صالح (أكبر من 0)</string>
+    <string name="notif_channel_name">تنبيهات AgriSmart</string>
+    <string name="notif_new_task_title">مهمة جديدة</string>
+    <string name="notif_new_task_text">%1$s · %2$s</string>
+    <string name="notif_low_stock_title">مخزون منخفض</string>
+    <string name="notif_low_stock_text">%1$s: بقي %2$s %3$s</string>
+    <string name="workers_title">العمّال</string>
+    <string name="workers_add">إضافة عامل</string>
+    <string name="workers_edit">تعديل العامل</string>
+    <string name="workers_empty">لا يوجد عمّال حاليًا</string>
+    <string name="workers_present_today">الحاضرون اليوم</string>
+    <string name="workers_present_count">%1$d / %2$d</string>
+    <string name="workers_salaries_month">أجور الشهر</string>
+    <string name="workers_presence_hint">اضغط على حاضر / غائب لتسجيل حضور اليوم.</string>
+    <string name="workers_present">حاضر</string>
+    <string name="workers_absent">غائب</string>
+    <string name="workers_no_phone">لا يوجد هاتف</string>
+    <string name="workers_salary_line">%1$s د.ت / يوم · %2$d يوم هذا الشهر</string>
+    <string name="workers_delete_confirm">حذف %1$s من قائمة العمّال؟</string>
+    <string name="tasks_title">المهام</string>
+    <string name="tasks_my_title">مهامي</string>
+    <string name="tasks_add">مهمة جديدة</string>
+    <string name="tasks_empty">لا توجد مهام هنا</string>
+    <string name="tasks_tab_todo">للقيام · %1$d</string>
+    <string name="tasks_tab_in_progress">جارية · %1$d</string>
+    <string name="tasks_tab_done">منتهية · %1$d</string>
+    <string name="task_status_todo">للقيام</string>
+    <string name="task_status_in_progress">جارية</string>
+    <string name="task_status_done">منتهية</string>
+    <string name="tasks_assignee_due">%1$s · %2$s</string>
+    <string name="tasks_start">ابدأ</string>
+    <string name="tasks_finish">انتهت</string>
+    <string name="tasks_report">إبلاغ</string>
+    <string name="tasks_report_hint">صف المشكلة</string>
+    <string name="tasks_report_sent">تم إبلاغ الفلاح بالمشكلة</string>
+    <string name="tasks_done_message">أحسنت، انتهت المهمة!</string>
+    <string name="tasks_created">تم إنشاء المهمة: سيتم إعلام العامل</string>
+    <string name="tasks_label_title">عنوان المهمة</string>
+    <string name="tasks_hint_title">معالجة القطعة 2</string>
+    <string name="tasks_label_worker">العامل</string>
+    <string name="tasks_label_due">الموعد</string>
+    <string name="stock_title">مخزون المدخلات</string>
+    <string name="stock_add">منتج جديد</string>
+    <string name="stock_edit">تعديل المنتج</string>
+    <string name="stock_empty">لا توجد منتجات في المخزون</string>
+    <string name="stock_alert_title">نفاد قريب</string>
+    <string name="stock_alert_count">منتجات تحت الحد الأدنى: %1$d</string>
+    <string name="stock_in">إدخال</string>
+    <string name="stock_out">إخراج</string>
+    <string name="stock_quantity">الكمية</string>
+    <string name="stock_threshold_line">الحد الأدنى: %1$s %2$s</string>
+    <string name="stock_low">مخزون منخفض</string>
+    <string name="stock_watch">تحت المراقبة</string>
+    <string name="stock_ok">جيد</string>
+    <string name="stock_label_name">اسم المنتج</string>
+    <string name="stock_hint_name">سماد NPK 15-15-15</string>
+    <string name="stock_label_type">النوع</string>
+    <string name="stock_label_quantity">الكمية</string>
+    <string name="stock_label_unit">الوحدة</string>
+    <string name="stock_hint_unit">كغ، ل، كيس…</string>
+    <string name="stock_label_threshold">الحد الأدنى (تنبيه)</string>
+    <string name="stock_label_item">المنتج</string>
+    <string name="stock_not_enough">المخزون غير كافٍ (بقي %1$s %2$s)</string>
+    <string name="finance_title">المالية</string>
+    <string name="finance_income">المداخيل</string>
+    <string name="finance_expenses">المصاريف</string>
+    <string name="finance_profit_month">الربح · %1$s</string>
+    <string name="finance_chart_title">آخر 6 أشهر</string>
+    <string name="finance_last_operations">آخر العمليات</string>
+    <string name="finance_empty">لا توجد عمليات</string>
+    <string name="finance_add_expense">مصروف</string>
+    <string name="finance_add_income">مدخول</string>
+    <string name="finance_all_parcels">كل القطع</string>
+    <string name="finance_general">عام</string>
+    <string name="finance_tx_details">%1$s · %2$s · %3$s</string>
+    <string name="finance_label_label">الوصف</string>
+    <string name="finance_hint_label">علاج بيولوجي، بيع زيتون…</string>
+    <string name="finance_label_amount">المبلغ (د.ت)</string>
+    <string name="finance_label_category">الصنف</string>
+    <string name="finance_saved">تم حفظ العملية</string>
+    <string name="finance_delete_confirm">حذف العملية «%1$s»؟</string>
+    <string name="harvest_title">المحاصيل</string>
+    <string name="harvest_all_crops">كل الزراعات</string>
+    <string name="harvest_forecast_title">توقع الذكاء الاصطناعي · موسم %1$d</string>
+    <string name="harvest_forecast_value">≈ %1$s طن</string>
+    <string name="harvest_forecast_trend">%1$s · %2$s %% مقارنة بـ %3$d</string>
+    <string name="harvest_forecast_none_title">توقع الذكاء الاصطناعي</string>
+    <string name="harvest_forecast_none">أدخل محاصيل للحصول على توقع</string>
+    <string name="harvest_low_reliability">موثوقية ضعيفة: مواسم قليلة مُدخلة</string>
+    <string name="harvest_chart_title">الإنتاج حسب الموسم (طن)</string>
+    <string name="harvest_chart_forecast">%1$d (توقع)</string>
+    <string name="harvest_last">آخر المحاصيل</string>
+    <string name="harvest_empty">لا توجد محاصيل مُدخلة</string>
+    <string name="harvest_add">إدخال محصول</string>
+    <string name="harvest_details">%1$s · %2$s · موسم %3$d</string>
+    <string name="harvest_label_quantity">الكمية (كغ)</string>
+    <string name="harvest_hint_quantity">مثال: 2400</string>
+    <string name="harvest_saved">تم حفظ المحصول</string>
+    <string name="harvest_delete_confirm">حذف هذا المحصول؟</string>
+    <string name="irrigation_title">الري</string>
+    <string name="irrigation_choose_parcel">اختر قطعة</string>
+    <string name="irrigation_weather_title">طقس القطعة · 3 أيام</string>
+    <string name="irrigation_advice_title">نصيحة الري</string>
+    <string name="irrigation_water_today">اسقِ اليوم</string>
+    <string name="irrigation_no_water">لا حاجة للري</string>
+    <string name="irrigation_quantity">الكمية</string>
+    <string name="irrigation_quantity_value">%1$s ل/م²</string>
+    <string name="irrigation_best_time">أفضل وقت</string>
+    <string name="irrigation_best_time_value">06:00</string>
+    <string name="irrigation_soil">التربة</string>
+    <string name="irrigation_soil_dry">جافة</string>
+    <string name="irrigation_soil_wet">رطبة</string>
+    <string name="irrigation_rule_water">القاعدة: لا أمطار متوقعة والتربة جافة، إذن نسقي.</string>
+    <string name="irrigation_rule_rain">القاعدة: أمطار متوقعة خلال 24 ساعة، لا داعي للري.</string>
+    <string name="irrigation_rule_wet">القاعدة: تم الري منذ أقل من 48 ساعة، التربة ما زالت رطبة.</string>
+    <string name="irrigation_mark_done">تأكيد: تم الري</string>
+    <string name="irrigation_saved">تم حفظ الري</string>
+    <string name="irrigation_last">آخر عمليات الري</string>
+    <string name="irrigation_history_empty">لا توجد عمليات ري مسجلة</string>
+    <string name="irrigation_no_gps">هذه القطعة بدون موقع GPS: أضفه في القطع.</string>
+    <string name="weather_no_key">مفتاح OpenWeather مفقود (انظر local.properties)</string>
+    <string name="weather_unavailable">الطقس غير متوفر (الشبكة أو المفتاح)</string>
+    <string name="weather_rain_chance">مطر %1$d %%</string>
+    <string name="scan_title">التشخيص الذكي</string>
+    <string name="scan_result_title">النتيجة</string>
+    <string name="scan_offline_info">النموذج على الهاتف · يعمل دون إنترنت</string>
+    <string name="scan_model_missing">نموذج التشخيص غير موجود: ضع plant_model.tflite و labels.txt في app/src/main/assets.</string>
+    <string name="scan_place_leaf">ضع الورقة داخل الإطار</string>
+    <string name="scan_photo">صورة الورقة</string>
+    <string name="scan_choose_parcel">القطعة المعنية</string>
+    <string name="scan_gallery">اختيار من المعرض</string>
+    <string name="scan_take_photo">التقاط صورة</string>
+    <string name="scan_history">آخر التشخيصات</string>
+    <string name="scan_history_empty">لا توجد تشخيصات حاليًا</string>
+    <string name="scan_history_line">%1$s (%2$d %%) · %3$s</string>
+    <string name="scan_probable_disease">المرض المحتمل</string>
+    <string name="scan_reliable">موثوق</string>
+    <string name="scan_confidence">درجة الثقة</string>
+    <string name="scan_other_hypotheses">فرضيات أخرى: %1$s</string>
+    <string name="scan_treatment">العلاج المقترح</string>
+    <string name="scan_organic">بيولوجي</string>
+    <string name="scan_safety">احترم الجرعات وتعليمات السلامة الخاصة بالمنتج.</string>
+    <string name="scan_disclaimer">مساعدة على القرار: لا تعوّض المهندس الفلاحي.</string>
+    <string name="scan_new_photo">صورة جديدة</string>
+    <string name="scan_unreliable">تشخيص غير موثوق</string>
+    <string name="scan_low_score">درجة الثقة: %1$d %% (أقل من 60 %%)</string>
+    <string name="scan_unreliable_text">بدل عرض تشخيص مشكوك فيه، يطلب منك التطبيق صورة جديدة.</string>
+    <string name="scan_tips">لصورة أفضل:\n✓ إضاءة طبيعية جيدة دون ظل\n✓ ورقة واحدة في الوسط\n✓ خلفية موحدة وصورة واضحة</string>
+    <string name="scan_retake">إعادة التقاط الصورة</string>
+    <string name="scan_saved">تم حفظ التشخيص</string>
+    <string name="scan_photo_not_uploaded">لم تُرسل الصورة (دون اتصال أو التخزين غير مفعّل): حُفظت النتيجة دون صورة</string>
+    <string name="scan_image_error">تعذّر قراءة هذه الصورة</string>
+    <string name="treat_healthy">النبتة تبدو سليمة. واصل المراقبة والتسميد العضوي (كومبوست).</string>
+    <string name="treat_mildew">رشّ محلول بوردو (20 غ/ل) مساءً ثم أعد بعد 10 أيام. أزل الأوراق المصابة.</string>
+    <string name="treat_powdery">رشّ الكبريت القابل للبلل (5 غ/ل) في طقس جاف، أو حليب مخفف (حجم واحد لـ 9 أحجام ماء). هوِّ النباتات.</string>
+    <string name="treat_rust">أزل الأوراق المصابة ورشّ الكبريت. تجنّب سقي الأوراق.</string>
+    <string name="treat_bacterial">رشّ منتجًا بالنحاس وعقّم أدوات التقليم. تجنّب الرطوبة على الأوراق.</string>
+    <string name="treat_mites">رشّ الصابون الأسود (15 غ/ل) أو زيت النيم على الجهة السفلى للأوراق.</string>
+    <string name="treat_scab">اجمع الأوراق المتساقطة ورشّ النحاس في آخر الشتاء.</string>
+    <string name="treat_rot">قلّم الأجزاء المصابة واحرقها، ثم استعمل محلول بوردو.</string>
+    <string name="treat_leaf_spot">أزل الأوراق المبقّعة، رشّ منقوع ذيل الحصان أو النحاس، وباعد بين النباتات.</string>
+    <string name="treat_virus">مرض فيروسي: اقلع النباتات المصابة وكافح الحشرات الناقلة (شباك، صابون أسود).</string>
+    <string name="treat_generic">اعزل النبتة، أزل الأجزاء المريضة واطلب رأي تقني فلاحي.</string>
+    <string name="assistant_title">المساعد</string>
+    <string name="assistant_hint">اطرح سؤالك…</string>
+    <string name="assistant_voice">تحدّث</string>
+    <string name="assistant_disclaimer">اقتراح: قد يخطئ المساعد.</string>
+    <string name="assistant_welcome">مرحبًا! يمكنني مساعدتك في الري والأمراض والمحاصيل والمخزون والمهام. اكتب أو اضغط على الميكروفون.</string>
+    <string name="assistant_context">السياق · %1$s · %2$s (%3$s)</string>
+    <string name="assistant_context_empty">السياق · لا يوجد تشخيص حديث</string>
+    <string name="assistant_suggest_water">متى يجب أن أسقي؟</string>
+    <string name="assistant_suggest_disease">علاج المرض</string>
+    <string name="assistant_suggest_harvest">توقع المحصول</string>
+    <string name="assistant_listening">أنا أستمع…</string>
+    <string name="assistant_mic_denied">تم رفض إذن الميكروفون</string>
+    <string name="assistant_voice_unavailable">التعرّف على الصوت غير متوفر في هذا الهاتف</string>
+    <string name="assistant_voice_error">لم أفهم، أعد المحاولة</string>
+    <string name="answer_hello">مرحبًا! كيف يمكنني مساعدتك اليوم؟</string>
+    <string name="answer_thanks">بكل سرور! يومًا موفقًا في الحقل.</string>
+    <string name="answer_irrigation">اسقِ في الصباح الباكر (حوالي السادسة) لتقليل التبخر. افتح شاشة الري: تجمع طقس القطعة والقاعدة «لا أمطار متوقعة + تربة جافة = اسقِ».</string>
+    <string name="answer_disease">التقط صورة للورقة بالفاحص: يعطي النموذج المرض المحتمل ودرجة ثقة وعلاجًا بيولوجيًا.</string>
+    <string name="answer_disease_context">آخر تشخيص: %1$s في %2$s. العلاج المقترح: %3$s</string>
+    <string name="answer_weather">طقس اليوم في لوحة القيادة، وتوقعات 3 أيام لكل قطعة في شاشة الري. تجنّب الرش عند الرياح القوية.</string>
+    <string name="answer_harvest">تحسب شاشة المحاصيل توقع الموسم القادم بمتوسط مرجّح للمواسم السابقة: كلما أدخلت محاصيل أكثر، كان أدق.</string>
+    <string name="answer_stock">في شاشة المخزون لكل منتج حد أدنى. تحت هذا الحد يظهر تنبيه أحمر وإشعار.</string>
+    <string name="answer_tasks">ينشئ الفلاح المهام في شاشة المهام ويسندها. يتلقى العامل إشعارًا ويضع المهمة «منتهية».</string>
+    <string name="answer_finance">أضف مصاريفك ومداخيلك حسب القطعة في المالية: يتحدث الربح (المداخيل - المصاريف) والرسم البياني.</string>
+    <string name="answer_unknown">لم أفهم جيدًا. جرّب كلمات مثل: سقي، مرض، محصول، مخزون، مهمة أو طقس.</string>
+    <string name="profile_title">الملف الشخصي</string>
+    <string name="profile_language">اللغة</string>
+    <string name="profile_french">Français</string>
+    <string name="profile_arabic">العربية</string>
+    <string name="profile_farm_line">%1$s · الرمز %2$s</string>
+    <string name="profile_saved">تم حفظ الملف</string>
+    <string name="seed_button">ملء ببيانات تجريبية (debug)</string>
+    <string name="seed_done">تمت إضافة البيانات التجريبية</string>
+    <string name="dashboard_tasks_todo">%1$d للقيام</string>
+    <string name="dashboard_tasks_done">%1$d منتهية</string>
+    <string name="dashboard_profit_detail">+%1$s / -%2$s د.ت</string>
+    <string name="alert_stock_title">مخزون منخفض: %1$s</string>
+    <string name="alert_stock_text">بقي %1$s %2$s · الحد %3$s %4$s</string>
+    <string name="alert_sick_title">مرض مكتشف: %1$s</string>
+    <string name="alert_sick_text">انظر التشخيص والعلاج</string>
+    <string name="alert_watch_title">تحت المراقبة: %1$s</string>
+    <string name="alert_watch_text">راقب القطعة هذا الأسبوع</string>
+    <string name="alert_wind_title">تنبيه الطقس: رياح قوية (%1$d كم/س)</string>
+    <string name="alert_wind_text">أجّل الرش</string>
+    <string name="alert_rain_title">أمطار حاليًا</string>
+    <string name="alert_rain_text">لا حاجة للري اليوم</string>
+    <string-array name="stock_type_labels">
+        <item>أسمدة</item>
+        <item>مبيدات</item>
+        <item>بذور</item>
+    </string-array>
+    <string-array name="finance_category_labels">
+        <item>علاج</item>
+        <item>أسمدة</item>
+        <item>بذور</item>
+        <item>يد عاملة</item>
+        <item>ماء / ري</item>
+        <item>وقود</item>
+        <item>معدات</item>
+        <item>بيع المحصول</item>
+        <item>منحة</item>
+        <item>أخرى</item>
+    </string-array>
+</resources>

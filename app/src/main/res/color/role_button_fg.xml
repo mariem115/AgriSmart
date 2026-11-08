@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Texte / icône du bouton de rôle : blanc si coché, foncé sinon -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/white" android:state_checked="true" />
+    <item android:color="@color/text_primary" />
+</selector>

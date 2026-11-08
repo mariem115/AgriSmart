@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Général ===== -->
+    <string name="app_name" translatable="false">AgriSmart</string>
+    <string name="app_tagline">Gérez votre exploitation, simplement.</string>
+    <string name="lang_fr" translatable="false">FR</string>
+    <string name="lang_ar" translatable="false">عربي</string>
+    <string name="back">Retour</string>
+    <string name="yes">Oui</string>
+    <string name="cancel">Annuler</string>
+    <string name="coming_soon">Bientôt disponible</string>
+    <string name="placeholder_dash">--</string>
+
+    <!-- ===== Rôles ===== -->
+    <string name="role_farmer">Agriculteur</string>
+    <string name="role_worker">Ouvrier</string>
+
+    <!-- ===== Connexion ===== -->
+    <string name="login_i_am">Je suis</string>
+    <string name="label_email">Adresse e-mail</string>
+    <string name="hint_email">nom@exemple.com</string>
+    <string name="label_password">Mot de passe</string>
+    <string name="hint_password">Votre mot de passe</string>
+    <string name="forgot_password">Mot de passe oublié ?</string>
+    <string name="btn_login">Se connecter</string>
+    <string name="no_account">Pas encore de compte ?</string>
+    <string name="create_account">Créer un compte</string>
+    <string name="reset_enter_email">Saisissez d\'abord votre adresse e-mail</string>
+    <string name="reset_email_sent">E-mail de réinitialisation envoyé à %1$s</string>
+
+    <!-- ===== Inscription ===== -->
+    <string name="register_title">Créer un compte</string>
+    <string name="register_subtitle">Quelques informations pour démarrer votre exploitation.</string>
+    <string name="label_full_name">Nom complet</string>
+    <string name="hint_full_name">Mohamed Ben Salah</string>
+    <string name="hint_password_new">Au moins 8 caractères</string>
+    <string name="label_farm_name">Nom de l\'exploitation</string>
+    <string name="hint_farm_name">Ferme Ben Salah</string>
+    <string name="label_region">Région</string>
+    <string name="hint_region">Sfax</string>
+    <string name="label_farm_code">Code de l\'exploitation</string>
+    <string name="hint_farm_code">Ex : AB12CD</string>
+    <string name="farm_code_help">Demandez ce code à votre agriculteur : il est affiché sur son tableau de bord.</string>
+    <string name="btn_register">Créer mon compte</string>
+    <string name="already_registered">Déjà inscrit ?</string>
+    <string name="go_login">Se connecter</string>
+
+    <!-- ===== Erreurs ===== -->
+    <string name="error_required">Champ obligatoire</string>
+    <string name="error_email">Adresse e-mail invalide</string>
+    <string name="error_password_short">Au moins 8 caractères</string>
+    <string name="error_farm_code_format">Le code contient 6 caractères</string>
+    <string name="error_farm_code_unknown">Code introuvable. Vérifiez-le auprès de votre agriculteur.</string>
+    <string name="error_wrong_credentials">E-mail ou mot de passe incorrect</string>
+    <string name="error_email_used">Cette adresse e-mail est déjà utilisée</string>
+    <string name="error_weak_password">Mot de passe trop faible</string>
+    <string name="error_network">Pas de connexion internet. Réessayez.</string>
+    <string name="error_unknown">Une erreur est survenue : %1$s</string>
+    <string name="error_profile_missing">Profil introuvable pour ce compte. Créez un nouveau compte.</string>
+    <string name="error_role_farmer">Ce compte est un compte Agriculteur : choisissez « Agriculteur ».</string>
+    <string name="error_role_worker">Ce compte est un compte Ouvrier : choisissez « Ouvrier ».</string>
+
+    <!-- ===== Tableau de bord ===== -->
+    <string name="dashboard_greeting">Bonjour, %1$s</string>
+    <string name="dashboard_farm_line">%1$s · %2$s</string>
+    <string name="notifications">Notifications</string>
+    <string name="no_notifications">Aucune nouvelle notification</string>
+    <string name="weather_today">Aujourd\'hui · %1$s</string>
+    <string name="weather_today_default">Aujourd\'hui</string>
+    <string name="weather_placeholder_temp">--°C</string>
+    <string name="weather_placeholder_desc">Météo disponible prochainement</string>
+    <string name="weather_humidity">Humidité %1$s</string>
+    <string name="weather_wind">Vent %1$s</string>
+    <string name="weather_rain">Pluie %1$s</string>
+    <string name="profit_month">Bénéfice du mois</string>
+    <string name="profit_placeholder">-- DT</string>
+    <string name="tasks_today_card">Tâches du jour</string>
+    <string name="action_irrigation">Irrigation</string>
+    <string name="action_workers">Ouvriers</string>
+    <string name="action_stock">Stock</string>
+    <string name="action_finance">Finances</string>
+    <string name="action_harvest">Récoltes</string>
+    <string name="alerts_title">Alertes</string>
+    <string name="alerts_empty">Aucune alerte pour le moment</string>
+    <string name="see_all">Tout voir</string>
+    <string name="tasks_today_title">Tâches du jour</string>
+    <string name="tasks_today_empty">Aucune tâche pour aujourd\'hui</string>
+    <string name="farm_code_title">Code de l\'exploitation</string>
+    <string name="farm_code_hint">À donner à vos ouvriers pour qu\'ils rejoignent votre ferme. Appuyez pour copier.</string>
+    <string name="farm_code_copied">Code copié</string>
+
+    <!-- ===== Navigation du bas ===== -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_parcels">Parcelles</string>
+    <string name="nav_scan">Scanner</string>
+    <string name="nav_tasks">Tâches</string>
+    <string name="nav_assistant">Assistant</string>
+
+    <!-- ===== Déconnexion ===== -->
+    <string name="logout">Déconnexion</string>
+    <string name="logout_confirm">Voulez-vous vous déconnecter ?</string>
+
+    <!-- ===== Listes (même ordre que arrays.xml) ===== -->
+    <string-array name="crop_labels">
+        <item>Olivier</item>
+        <item>Agrumes</item>
+        <item>Palmier dattier</item>
+        <item>Céréales</item>
+        <item>Maraîchage</item>
+        <item>Autre</item>
+    </string-array>
+    <string-array name="soil_labels">
+        <item>Argileux</item>
+        <item>Limoneux</item>
+        <item>Sableux</item>
+        <item>Calcaire</item>
+    </string-array>
+    <string-array name="health_labels">
+        <item>Saine</item>
+        <item>À surveiller</item>
+        <item>Maladie détectée</item>
+    </string-array>
+
+    <!-- ===== Parcelles : liste ===== -->
+    <string name="parcels_title">Mes parcelles</string>
+    <string name="parcels_search_hint">Rechercher une parcelle</string>
+    <string name="parcels_filter_all">Toutes</string>
+    <string name="parcels_empty">Aucune parcelle pour le moment</string>
+    <string name="parcels_add">Ajouter une parcelle</string>
+    <string name="parcel_subtitle">%1$s · %2$s ha · %3$s</string>
+
+    <!-- ===== Parcelles : détail / formulaire ===== -->
+    <string name="parcel_new_title">Nouvelle parcelle</string>
+    <string name="parcel_edit_title">Modifier la parcelle</string>
+    <string name="parcel_label_name">Nom de la parcelle</string>
+    <string name="parcel_hint_name">Parcelle 1 · Oliveraie Nord</string>
+    <string name="parcel_label_crop">Culture</string>
+    <string name="parcel_label_area">Surface (ha)</string>
+    <string name="parcel_hint_area">Ex : 3,5</string>
+    <string name="parcel_label_soil">Type de sol</string>
+    <string name="parcel_label_health">État de santé</string>
+    <string name="parcel_label_gps">Position GPS</string>
+    <string name="parcel_label_latitude">Latitude</string>
+    <string name="parcel_label_longitude">Longitude</string>
+    <string name="parcel_use_my_location">Utiliser ma position actuelle</string>
+    <string name="parcel_open_maps">Ouvrir dans Google Maps</string>
+    <string name="parcel_no_position">Aucune position</string>
+    <string name="parcel_area_value">%1$s ha</string>
+    <string name="parcel_gps_value">%1$s, %2$s</string>
+    <string name="parcel_history">Historique</string>
+    <string name="parcel_history_empty">Aucun historique pour cette parcelle</string>
+    <string name="parcel_last_diagnostic">Dernier diagnostic : %1$s</string>
+    <string name="parcel_no_diagnostic">Aucun diagnostic</string>
+    <string name="history_diagnostic">Diagnostic : %1$s (%2$d %%)</string>
+    <string name="history_irrigation">Irrigation : %1$s L/m²</string>
+    <string name="history_harvest">Récolte : %1$s kg</string>
+    <string name="btn_save">Enregistrer</string>
+    <string name="btn_edit">Modifier</string>
+    <string name="btn_delete">Supprimer</string>
+    <string name="parcel_saved">Parcelle enregistrée</string>
+    <string name="parcel_deleted">Parcelle supprimée</string>
+    <string name="parcel_delete_confirm">Supprimer « %1$s » ? Cette action est définitive.</string>
+    <string name="parcel_not_found">Parcelle introuvable</string>
+    <string name="error_number">Nombre invalide</string>
+    <string name="error_area">La surface doit être supérieure à 0</string>
+    <string name="error_latitude">Latitude entre -90 et 90</string>
+    <string name="error_longitude">Longitude entre -180 et 180</string>
+    <string name="error_gps_both">Saisissez la latitude ET la longitude (ou aucune)</string>
+    <string name="error_choose">Choisissez une valeur</string>
+    <string name="location_searching">Recherche de la position…</string>
+    <string name="location_found">Position trouvée</string>
+    <string name="location_permission_denied">Autorisation de localisation refusée</string>
+    <string name="location_unavailable">Position indisponible. Activez le GPS et réessayez.</string>
+    <string name="maps_unavailable">Aucune application de cartes trouvée</string>
+
+    <!-- ===== Phases 3 à 8 ===== -->
+    <string name="label_parcel">Parcelle</string>
+    <string name="label_date">Date</string>
+    <string name="label_phone">Téléphone</string>
+    <string name="hint_phone">+216 98 123 456</string>
+    <string name="label_daily_salary">Salaire journalier (DT)</string>
+    <string name="hint_daily_salary">Ex : 45</string>
+    <string name="btn_send">Envoyer</string>
+    <string name="loading">Chargement…</string>
+    <string name="today">Aujourd\'hui</string>
+    <string name="tomorrow">Demain</string>
+    <string name="money_value">%1$s DT</string>
+    <string name="percent_value">%1$d %%</string>
+    <string name="quantity_unit">%1$s %2$s</string>
+    <string name="temperature_value">%1$d°C</string>
+    <string name="chart_no_data">Pas encore de données</string>
+    <string name="need_parcel_first">Ajoutez d\'abord une parcelle</string>
+    <string name="need_worker_first">Ajoutez d\'abord un ouvrier</string>
+    <string name="error_amount">Montant invalide (supérieur à 0)</string>
+    <string name="notif_channel_name">Alertes AgriSmart</string>
+    <string name="notif_new_task_title">Nouvelle tâche</string>
+    <string name="notif_new_task_text">%1$s · %2$s</string>
+    <string name="notif_low_stock_title">Stock bas</string>
+    <string name="notif_low_stock_text">%1$s : il reste %2$s %3$s</string>
+    <string name="workers_title">Ouvriers</string>
+    <string name="workers_add">Ajouter un ouvrier</string>
+    <string name="workers_edit">Modifier l\'ouvrier</string>
+    <string name="workers_empty">Aucun ouvrier pour le moment</string>
+    <string name="workers_present_today">Présents aujourd\'hui</string>
+    <string name="workers_present_count">%1$d / %2$d</string>
+    <string name="workers_salaries_month">Salaires du mois</string>
+    <string name="workers_presence_hint">Appuyez sur Présent / Absent pour pointer la journée.</string>
+    <string name="workers_present">Présent</string>
+    <string name="workers_absent">Absent</string>
+    <string name="workers_no_phone">Pas de téléphone</string>
+    <string name="workers_salary_line">%1$s DT / jour · %2$d j ce mois</string>
+    <string name="workers_delete_confirm">Supprimer %1$s de la liste des ouvriers ?</string>
+    <string name="tasks_title">Tâches</string>
+    <string name="tasks_my_title">Mes tâches</string>
+    <string name="tasks_add">Nouvelle tâche</string>
+    <string name="tasks_empty">Aucune tâche ici</string>
+    <string name="tasks_tab_todo">À faire · %1$d</string>
+    <string name="tasks_tab_in_progress">En cours · %1$d</string>
+    <string name="tasks_tab_done">Terminées · %1$d</string>
+    <string name="task_status_todo">À faire</string>
+    <string name="task_status_in_progress">En cours</string>
+    <string name="task_status_done">Terminée</string>
+    <string name="tasks_assignee_due">%1$s · %2$s</string>
+    <string name="tasks_start">Commencer</string>
+    <string name="tasks_finish">Terminée</string>
+    <string name="tasks_report">Signaler</string>
+    <string name="tasks_report_hint">Décrivez le problème</string>
+    <string name="tasks_report_sent">Problème signalé à l\'agriculteur</string>
+    <string name="tasks_done_message">Bravo, tâche terminée !</string>
+    <string name="tasks_created">Tâche créée : l\'ouvrier va être notifié</string>
+    <string name="tasks_label_title">Titre de la tâche</string>
+    <string name="tasks_hint_title">Traiter la parcelle 2</string>
+    <string name="tasks_label_worker">Ouvrier</string>
+    <string name="tasks_label_due">Échéance</string>
+    <string name="stock_title">Stock d\'intrants</string>
+    <string name="stock_add">Nouvel article</string>
+    <string name="stock_edit">Modifier l\'article</string>
+    <string name="stock_empty">Aucun article dans le stock</string>
+    <string name="stock_alert_title">Rupture proche</string>
+    <string name="stock_alert_count">Articles sous le seuil minimum : %1$d</string>
+    <string name="stock_in">Entrée</string>
+    <string name="stock_out">Sortie</string>
+    <string name="stock_quantity">Quantité</string>
+    <string name="stock_threshold_line">Seuil minimum : %1$s %2$s</string>
+    <string name="stock_low">Stock bas</string>
+    <string name="stock_watch">À surveiller</string>
+    <string name="stock_ok">OK</string>
+    <string name="stock_label_name">Nom de l\'article</string>
+    <string name="stock_hint_name">Engrais NPK 15-15-15</string>
+    <string name="stock_label_type">Type</string>
+    <string name="stock_label_quantity">Quantité</string>
+    <string name="stock_label_unit">Unité</string>
+    <string name="stock_hint_unit">kg, L, sac…</string>
+    <string name="stock_label_threshold">Seuil minimum (alerte)</string>
+    <string name="stock_label_item">Article</string>
+    <string name="stock_not_enough">Stock insuffisant (reste %1$s %2$s)</string>
+    <string name="finance_title">Finances</string>
+    <string name="finance_income">Revenus</string>
+    <string name="finance_expenses">Dépenses</string>
+    <string name="finance_profit_month">Bénéfice · %1$s</string>
+    <string name="finance_chart_title">6 derniers mois</string>
+    <string name="finance_last_operations">Dernières opérations</string>
+    <string name="finance_empty">Aucune opération</string>
+    <string name="finance_add_expense">Dépense</string>
+    <string name="finance_add_income">Revenu</string>
+    <string name="finance_all_parcels">Toutes les parcelles</string>
+    <string name="finance_general">Général</string>
+    <string name="finance_tx_details">%1$s · %2$s · %3$s</string>
+    <string name="finance_label_label">Libellé</string>
+    <string name="finance_hint_label">Traitement bio, vente d\'olives…</string>
+    <string name="finance_label_amount">Montant (DT)</string>
+    <string name="finance_label_category">Catégorie</string>
+    <string name="finance_saved">Opération enregistrée</string>
+    <string name="finance_delete_confirm">Supprimer l\'opération « %1$s » ?</string>
+    <string name="harvest_title">Récoltes</string>
+    <string name="harvest_all_crops">Toutes les cultures</string>
+    <string name="harvest_forecast_title">Prévision IA · saison %1$d</string>
+    <string name="harvest_forecast_value">≈ %1$s t</string>
+    <string name="harvest_forecast_trend">%1$s · %2$s %% par rapport à %3$d</string>
+    <string name="harvest_forecast_none_title">Prévision IA</string>
+    <string name="harvest_forecast_none">Saisissez des récoltes pour obtenir une prévision</string>
+    <string name="harvest_low_reliability">Fiabilité faible : peu de saisons saisies</string>
+    <string name="harvest_chart_title">Production par saison (tonnes)</string>
+    <string name="harvest_chart_forecast">%1$d (prév.)</string>
+    <string name="harvest_last">Dernières récoltes</string>
+    <string name="harvest_empty">Aucune récolte saisie</string>
+    <string name="harvest_add">Saisir une récolte</string>
+    <string name="harvest_details">%1$s · %2$s · saison %3$d</string>
+    <string name="harvest_label_quantity">Quantité (kg)</string>
+    <string name="harvest_hint_quantity">Ex : 2400</string>
+    <string name="harvest_saved">Récolte enregistrée</string>
+    <string name="harvest_delete_confirm">Supprimer cette récolte ?</string>
+    <string name="irrigation_title">Irrigation</string>
+    <string name="irrigation_choose_parcel">Choisir une parcelle</string>
+    <string name="irrigation_weather_title">Météo de la parcelle · 3 jours</string>
+    <string name="irrigation_advice_title">Conseil d\'arrosage</string>
+    <string name="irrigation_water_today">Arroser aujourd\'hui</string>
+    <string name="irrigation_no_water">Pas besoin d\'arroser</string>
+    <string name="irrigation_quantity">Quantité</string>
+    <string name="irrigation_quantity_value">%1$s L/m²</string>
+    <string name="irrigation_best_time">Heure idéale</string>
+    <string name="irrigation_best_time_value">06:00</string>
+    <string name="irrigation_soil">Sol</string>
+    <string name="irrigation_soil_dry">Sec</string>
+    <string name="irrigation_soil_wet">Humide</string>
+    <string name="irrigation_rule_water">Règle : pas de pluie prévue et sol sec, donc arroser.</string>
+    <string name="irrigation_rule_rain">Règle : pluie prévue dans les 24 h, inutile d\'arroser.</string>
+    <string name="irrigation_rule_wet">Règle : arrosage fait il y a moins de 48 h, le sol est encore humide.</string>
+    <string name="irrigation_mark_done">Valider : arrosage effectué</string>
+    <string name="irrigation_saved">Arrosage enregistré</string>
+    <string name="irrigation_last">Dernières irrigations</string>
+    <string name="irrigation_history_empty">Aucun arrosage enregistré</string>
+    <string name="irrigation_no_gps">Cette parcelle n\'a pas de position GPS : ajoutez-la dans Parcelles.</string>
+    <string name="weather_no_key">Clé OpenWeather manquante (voir local.properties)</string>
+    <string name="weather_unavailable">Météo indisponible (réseau ou clé invalide)</string>
+    <string name="weather_rain_chance">Pluie %1$d %%</string>
+    <string name="scan_title">Diagnostic IA</string>
+    <string name="scan_result_title">Résultat</string>
+    <string name="scan_offline_info">Modèle sur le téléphone · fonctionne sans internet</string>
+    <string name="scan_model_missing">Modèle de diagnostic absent : placez plant_model.tflite et labels.txt dans app/src/main/assets.</string>
+    <string name="scan_place_leaf">Placez la feuille dans le cadre</string>
+    <string name="scan_photo">Photo de la feuille</string>
+    <string name="scan_choose_parcel">Parcelle concernée</string>
+    <string name="scan_gallery">Choisir dans la galerie</string>
+    <string name="scan_take_photo">Prendre une photo</string>
+    <string name="scan_history">Derniers diagnostics</string>
+    <string name="scan_history_empty">Aucun diagnostic pour le moment</string>
+    <string name="scan_history_line">%1$s (%2$d %%) · %3$s</string>
+    <string name="scan_probable_disease">Maladie probable</string>
+    <string name="scan_reliable">Fiable</string>
+    <string name="scan_confidence">Score de confiance</string>
+    <string name="scan_other_hypotheses">Autres hypothèses : %1$s</string>
+    <string name="scan_treatment">Traitement conseillé</string>
+    <string name="scan_organic">Bio</string>
+    <string name="scan_safety">Respectez les doses et les consignes de sécurité du produit.</string>
+    <string name="scan_disclaimer">Aide à la décision : ne remplace pas un ingénieur agronome.</string>
+    <string name="scan_new_photo">Nouvelle photo</string>
+    <string name="scan_unreliable">Diagnostic non fiable</string>
+    <string name="scan_low_score">Score de confiance : %1$d %% (moins de 60 %%)</string>
+    <string name="scan_unreliable_text">Plutôt qu\'afficher un diagnostic douteux, l\'application vous demande une nouvelle photo.</string>
+    <string name="scan_tips">Pour une meilleure photo :\n✓ Bonne lumière naturelle, sans ombre\n✓ Une seule feuille, bien au centre\n✓ Fond uni et image nette</string>
+    <string name="scan_retake">Reprendre la photo</string>
+    <string name="scan_saved">Diagnostic enregistré</string>
+    <string name="scan_photo_not_uploaded">Photo non envoyée (hors ligne ou Storage non activé) : résultat enregistré sans photo</string>
+    <string name="scan_image_error">Impossible de lire cette image</string>
+    <string name="treat_healthy">La plante semble saine. Continuez la surveillance et une fertilisation organique (compost).</string>
+    <string name="treat_mildew">Pulvériser une bouillie bordelaise (20 g/L) le soir, puis répéter après 10 jours. Retirer les feuilles atteintes.</string>
+    <string name="treat_powdery">Pulvériser du soufre mouillable (5 g/L) par temps sec, ou du lait dilué (1 volume pour 9 volumes d\'eau). Aérer la végétation.</string>
+    <string name="treat_rust">Retirer les feuilles touchées et pulvériser du soufre. Éviter d\'arroser le feuillage.</string>
+    <string name="treat_bacterial">Pulvériser un produit à base de cuivre et désinfecter les outils de taille. Éviter l\'humidité sur les feuilles.</string>
+    <string name="treat_mites">Pulvériser du savon noir (15 g/L) ou de l\'huile de neem sur le dessous des feuilles.</string>
+    <string name="treat_scab">Ramasser les feuilles tombées et pulvériser du cuivre en fin d\'hiver.</string>
+    <string name="treat_rot">Tailler et brûler les parties atteintes, puis appliquer de la bouillie bordelaise.</string>
+    <string name="treat_leaf_spot">Retirer les feuilles tachées, pulvériser du purin de prêle ou du cuivre, et espacer les plants.</string>
+    <string name="treat_virus">Maladie virale : arracher les plants atteints et lutter contre les insectes vecteurs (filets, savon noir).</string>
+    <string name="treat_generic">Isoler la plante, retirer les parties malades et demander l\'avis d\'un technicien agricole.</string>
+    <string name="assistant_title">Assistant</string>
+    <string name="assistant_hint">Posez votre question…</string>
+    <string name="assistant_voice">Parler</string>
+    <string name="assistant_disclaimer">Suggestion : l\'assistant peut se tromper.</string>
+    <string name="assistant_welcome">Bonjour ! Je peux vous aider pour l\'arrosage, les maladies, les récoltes, le stock ou les tâches. Écrivez ou appuyez sur le micro.</string>
+    <string name="assistant_context">Contexte · %1$s · %2$s (%3$s)</string>
+    <string name="assistant_context_empty">Contexte · aucun diagnostic récent</string>
+    <string name="assistant_suggest_water">Quand dois-je arroser ?</string>
+    <string name="assistant_suggest_disease">Traiter la maladie</string>
+    <string name="assistant_suggest_harvest">Prévision de récolte</string>
+    <string name="assistant_listening">Je vous écoute…</string>
+    <string name="assistant_mic_denied">Autorisation du micro refusée</string>
+    <string name="assistant_voice_unavailable">Reconnaissance vocale indisponible sur ce téléphone</string>
+    <string name="assistant_voice_error">Je n\'ai pas compris, réessayez</string>
+    <string name="answer_hello">Bonjour ! Comment puis-je vous aider aujourd\'hui ?</string>
+    <string name="answer_thanks">Avec plaisir ! Bonne journée aux champs.</string>
+    <string name="answer_irrigation">Arrosez tôt le matin (vers 6 h) pour limiter l\'évaporation. Ouvrez l\'écran Irrigation : il combine la météo de la parcelle et la règle « pas de pluie prévue + sol sec = arroser ».</string>
+    <string name="answer_disease">Prenez une photo de la feuille avec le Scanner : le modèle donne la maladie probable, un score et un traitement bio.</string>
+    <string name="answer_disease_context">Dernier diagnostic : %1$s sur %2$s. Traitement conseillé : %3$s</string>
+    <string name="answer_weather">La météo du jour est sur le tableau de bord, et la prévision sur 3 jours de chaque parcelle est dans l\'écran Irrigation. Évitez de pulvériser s\'il y a du vent fort.</string>
+    <string name="answer_harvest">L\'écran Récoltes calcule la prévision de la saison suivante avec une moyenne pondérée des saisons passées : plus vous saisissez de récoltes, plus elle est fiable.</string>
+    <string name="answer_stock">Dans l\'écran Stock, chaque intrant a un seuil minimum. Sous ce seuil, une alerte rouge et une notification vous préviennent.</string>
+    <string name="answer_tasks">L\'agriculteur crée les tâches dans l\'écran Tâches et les assigne. L\'ouvrier reçoit une notification et marque la tâche « Terminée ».</string>
+    <string name="answer_finance">Ajoutez vos dépenses et revenus par parcelle dans Finances : le bénéfice (revenus - dépenses) et le graphique se mettent à jour.</string>
+    <string name="answer_unknown">Je n\'ai pas bien compris. Essayez avec des mots comme : arroser, maladie, récolte, stock, tâche ou météo.</string>
+    <string name="profile_title">Profil</string>
+    <string name="profile_language">Langue</string>
+    <string name="profile_french">Français</string>
+    <string name="profile_arabic">العربية</string>
+    <string name="profile_farm_line">%1$s · code %2$s</string>
+    <string name="profile_saved">Profil enregistré</string>
+    <string name="seed_button">Remplir avec des données de démo (debug)</string>
+    <string name="seed_done">Données de démonstration ajoutées</string>
+    <string name="dashboard_tasks_todo">%1$d à faire</string>
+    <string name="dashboard_tasks_done">%1$d terminée(s)</string>
+    <string name="dashboard_profit_detail">+%1$s / -%2$s DT</string>
+    <string name="alert_stock_title">Stock bas : %1$s</string>
+    <string name="alert_stock_text">Reste %1$s %2$s · seuil %3$s %4$s</string>
+    <string name="alert_sick_title">Maladie détectée : %1$s</string>
+    <string name="alert_sick_text">Voir le diagnostic et le traitement</string>
+    <string name="alert_watch_title">À surveiller : %1$s</string>
+    <string name="alert_watch_text">Contrôler la parcelle cette semaine</string>
+    <string name="alert_wind_title">Alerte météo : vent fort (%1$d km/h)</string>
+    <string name="alert_wind_text">Reporter la pulvérisation</string>
+    <string name="alert_rain_title">Pluie en cours</string>
+    <string name="alert_rain_text">Pas besoin d\'arroser aujourd\'hui</string>
+    <string-array name="stock_type_labels">
+        <item>Engrais</item>
+        <item>Pesticides</item>
+        <item>Semences</item>
+    </string-array>
+    <string-array name="finance_category_labels">
+        <item>Traitement</item>
+        <item>Engrais</item>
+        <item>Semences</item>
+        <item>Main-d\'œuvre</item>
+        <item>Eau / irrigation</item>
+        <item>Carburant</item>
+        <item>Matériel</item>
+        <item>Vente de récolte</item>
+        <item>Subvention</item>
+        <item>Autre</item>
+    </string-array>
+</resources>

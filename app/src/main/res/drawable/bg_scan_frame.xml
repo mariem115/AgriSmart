@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fond sombre du cadre photo -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:endColor="#1B2A1E"
+        android:startColor="#2E3F31" />
+    <corners android:radius="20dp" />
+</shape>

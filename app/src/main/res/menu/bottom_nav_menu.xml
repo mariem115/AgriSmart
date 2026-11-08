@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barre de navigation du bas (identique sur les écrans principaux) -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_parcels"
+        android:icon="@drawable/ic_place"
+        android:title="@string/nav_parcels" />
+    <item
+        android:id="@+id/nav_scan"
+        android:icon="@drawable/ic_camera"
+        android:title="@string/nav_scan" />
+    <item
+        android:id="@+id/nav_tasks"
+        android:icon="@drawable/ic_task"
+        android:title="@string/nav_tasks" />
+    <item
+        android:id="@+id/nav_assistant"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/nav_assistant" />
+</menu>

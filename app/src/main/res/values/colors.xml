@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palette verte (maquette Figma) -->
+    <color name="green_primary">#2E7D32</color>
+    <color name="green_dark">#1B5E20</color>
+    <color name="green_light">#43A047</color>
+    <color name="green_pale">#66BB6A</color>
+    <color name="green_soft">#E8F5E9</color>
+
+    <color name="bg">#F4F6F1</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_primary">#1C2B1E</color>
+    <color name="text_secondary">#6B7A6E</color>
+    <color name="divider">#E1E6DD</color>
+    <color name="white_translucent">#33FFFFFF</color>
+
+    <!-- Couleurs des pastilles / alertes -->
+    <color name="blue">#1E88E5</color>
+    <color name="blue_soft">#E3F2FD</color>
+    <color name="orange">#EF8F00</color>
+    <color name="orange_soft">#FFF3E0</color>
+    <color name="red">#D32F2F</color>
+    <color name="red_soft">#FDECEA</color>
+    <color name="yellow_soft">#FFF8E1</color>
+</resources>

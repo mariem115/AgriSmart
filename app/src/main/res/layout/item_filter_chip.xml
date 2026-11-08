@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Puce de filtre utilisée dans la liste des parcelles -->
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.AgriSmart.FilterChip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
